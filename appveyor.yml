@@ -8,13 +8,13 @@ environment:
  # Install scripts (runs after repo cloning)
 install:
 # get the latest version of node.js or io.js
- - ps: Install-Product node $env:nodejS_version
+ - ps: Install-Product node $env:nodejs_version
 
  #Install modules
  - npm install
 
  # Post install test scripts
- test_script:
+test_script:
   # Output useful info for debugging
   - node --version
   - npm --version
