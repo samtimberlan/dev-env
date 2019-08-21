@@ -16,7 +16,7 @@ describe("index.html", () => {
     const index = fs.readFileSync("./src/index.html", "utf-8");
     jsdom.env(index, (err, window) => {
       const h1 = window.document.getElementsByClassName("be-banned")[0];
-      expect(h1.innerHTML).to.equal("Users!");
+      expect(h1.innerHTML).to.equal("Users");
 
       done();
       // Free up memory used by in-memory DOM
